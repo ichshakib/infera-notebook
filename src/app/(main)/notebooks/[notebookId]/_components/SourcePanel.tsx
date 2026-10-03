@@ -669,7 +669,11 @@ export function SourcePanel({ className = '', notebookId }: SourcePanelProps) {
     });
 
     if (!uploadRes.ok) {
-      throw new Error('S3 upload failed');
+      const errorText = await uploadRes.text().catch(() => '');
+      console.error('S3 upload failed:', uploadRes.status, uploadRes.statusText, errorText);
+      throw new Error(
+        `S3 upload failed (${uploadRes.status}: ${uploadRes.statusText || errorText || 'Upload error'})`
+      );
     }
 
     return { key: path };
@@ -761,11 +765,12 @@ export function SourcePanel({ className = '', notebookId }: SourcePanelProps) {
         }
       }
     } catch (err) {
+      console.error('File upload error:', err);
       // If upload failed, show error and optionally refetch
       if ((err as Error).name === 'AbortError') {
         toast.error('Upload cancelled.');
       } else {
-        toast.error('Failed to upload file. Please try again.');
+        toast.error((err as Error).message || 'Failed to upload file. Please try again.');
         // Fall back to refetching if needed
         await fetchSources();
       }

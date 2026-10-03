@@ -169,7 +169,11 @@ export default function AccountPage() {
         headers: { 'Content-Type': file.type },
       });
 
-      if (!uploadRes.ok) throw new Error('Failed to upload file to S3');
+      if (!uploadRes.ok) {
+        const errorText = await uploadRes.text().catch(() => '');
+        console.error('Avatar upload failed:', uploadRes.status, uploadRes.statusText, errorText);
+        throw new Error(`Failed to upload file to S3 (${uploadRes.status})`);
+      }
 
       // 3. Update local state and user record with the path
       setImage(path);

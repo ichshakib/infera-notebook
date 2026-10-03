@@ -28,6 +28,7 @@ export function getS3Client(): S3Client {
     s3Client = new S3Client({
       region,
       ...(endpoint && { endpoint }),
+      forcePathStyle: env.AWS_FORCE_PATH_STYLE,
       credentials: {
         accessKeyId: env.AWS_ACCESS_KEY_ID!,
         secretAccessKey: env.AWS_SECRET_ACCESS_KEY!,
@@ -46,7 +47,7 @@ export function _getInternalUrl(path: string): string {
   const endpoint = env.AWS_ENDPOINT;
 
   const baseUrl = endpoint
-    ? endpoint.replace(/\/$/, '')
+    ? `${endpoint.replace(/\/$/, '')}/${bucket}`
     : `https://${bucket}.s3.${region}.amazonaws.com`;
 
   return `${baseUrl}/${path}`;

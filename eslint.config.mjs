@@ -13,7 +13,14 @@ const eslintConfig = defineConfig([
   ...nextTs,
   prettier,
   // Override default ignores of eslint-config-next.
-  globalIgnores(['.next/**', 'out/**', 'build/**', 'next-env.d.ts', 'generated/**', 'src/generated/**']),
+  globalIgnores([
+    '.next/**',
+    'out/**',
+    'build/**',
+    'next-env.d.ts',
+    'generated/**',
+    'src/generated/**',
+  ]),
   {
     rules: {
       '@typescript-eslint/no-explicit-any': 'off',
