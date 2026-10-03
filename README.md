@@ -289,14 +289,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Icons from [Lucide](https://lucide.dev/)
 - Powered by various AI and ML services
 
-## 📞 Support & Contact
+## 📬 Contact
 
-If you encounter any issues or have questions:
+If you have any questions, feedback, or need support:
 
-1. Check existing [Issues](https://github.com/ichshakib/infera-notebook/issues)
-2. Create a new issue with detailed information
-3. Follow our [Code of Conduct](CODE_OF_CONDUCT.md)
-4. Contact directly via email: [ichshakib@gmail.com](mailto:ichshakib@gmail.com)
+- **Maintainer**: Shakib Khan
+- **Email**: [ichshakib@gmail.com](mailto:ichshakib@gmail.com)
+- **GitHub**: [@ichshakib](https://github.com/ichshakib)
+- **Issues**: [GitHub Issues](https://github.com/ichshakib/infera-notebook/issues)
 
 ---
 

@@ -134,6 +134,14 @@ If you have questions or concerns about this Code of Conduct, please:
 2. Contact project maintainers privately at [ichshakib@gmail.com](mailto:ichshakib@gmail.com)
 3. Create a private issue on GitHub
 
+## Contact
+
+For any inquiries, questions, or private reports regarding this Code of Conduct:
+
+- **Maintainer**: Shakib Khan
+- **Email**: [ichshakib@gmail.com](mailto:ichshakib@gmail.com)
+- **GitHub**: [@ichshakib](https://github.com/ichshakib)
+
 ## Acknowledgment
 
 By participating in this project, you agree to abide by this Code of Conduct. We appreciate your cooperation in making Infera Notebook a welcoming and inclusive community for all contributors.

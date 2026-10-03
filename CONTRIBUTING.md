@@ -395,10 +395,12 @@ If you have questions:
 
 ## Contact
 
-If you have questions or need to contact maintainers directly:
+If you have questions, feedback, or need to reach out to the project maintainers directly:
 
+- **Maintainer**: Shakib Khan
 - **Email**: [ichshakib@gmail.com](mailto:ichshakib@gmail.com)
 - **GitHub**: [@ichshakib](https://github.com/ichshakib)
+- **Issues**: [GitHub Issues](https://github.com/ichshakib/infera-notebook/issues)
 
 ## Recognition
 
